@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="glass-panel">
+            <h1>Algorithm <span>Visualizer</span></h1>
+            
+            <div class="controls-container">
+                <div class="control-group">
+                    <button id="generate-btn" class="primary-btn">Generate New Array</button>
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <label for="size-slider">Array Size</label>
+                            <span id="size-display" class="slider-value">50</span>
+                        </div>
+                        <input type="range" id="size-slider" min="10" max="150" value="50">
+                    </div>
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <label for="speed-slider">Speed</label>
+                            <span id="speed-display" class="slider-value">1.0x</span>
+                        </div>
+                        <input type="range" id="speed-slider" min="1" max="100" value="50">
+                    </div>
+                </div>
+
+                <div class="control-group algo-selection">
+                    <button class="algo-btn" data-algo="bubble">Bubble Sort</button>
+                    <button class="algo-btn" data-algo="quick">Quick Sort</button>
+                    <button class="algo-btn" data-algo="insertion">Insertion Sort</button>
+                    <button class="algo-btn" data-algo="merge">Merge Sort</button>
+                </div>
+                
+                <div class="control-group">
+                    <button id="sort-btn" class="action-btn" disabled>Select Algorithm</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="visualization-container">
+            <div id="array-container"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
